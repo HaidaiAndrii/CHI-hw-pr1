@@ -8,4 +8,7 @@ module.exports = {
     rules: {
         'prettier/prettier': ['error'],
     },
+    "rules": {
+        "eol-last": ["error", "never"]
+    }
 };
