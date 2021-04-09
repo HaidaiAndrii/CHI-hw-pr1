@@ -47,23 +47,29 @@ function browserSync() {
 }
 
 function watchFiles() {
-    gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.js], js);
-    gulp.watch([path.watch.img], images);
+    gulp.watch([path.watch.html], lintHTML);
+    gulp.watch([path.watch.css], lintCSS);
+    gulp.watch([path.watch.js], lintJs);
+    gulp.watch([path.watch.img], imagesMin);
 }
+
+gulp.task('watch', function() {
+    gulp.watch('./src/js.script.js', ['lintJs']);
+    gulp.watch('./src/index.html', ['lintHTML']);
+});
+
 
 function clean() {
     return del(path.clean);
 }
 
-function html() {
+function lintHTML() {
     return src(path.src.html)
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream());
 }
 
-function css() {
+function lintCSS() {
     return src(path.src.css)
         .pipe(
             scss({
@@ -88,7 +94,7 @@ function css() {
         .pipe(browsersync.stream());
 }
 
-function js() {
+function lintJs() {
     return src(path.src.js)
         .pipe(eslint())
         .pipe(eslint.format())
@@ -105,7 +111,7 @@ function js() {
         .pipe(browsersync.stream());
 }
 
-function images() {
+function imagesMin() {
     return src(path.src.img)
         .pipe(
             imagemin({
@@ -118,13 +124,13 @@ function images() {
         .pipe(browsersync.stream());
 }
 
-let build = gulp.series(clean, html, js, css, images);
-let watch = gulp.parallel(build, watchFiles, browserSync);
+let build = gulp.series(clean, lintHTML, lintJs, lintCSS, imagesMin);
+let watch = gulp.parallel(watchFiles, browserSync);
 
-exports.images = images;
-exports.js = js;
-exports.css = css;
-exports.html = html;
+exports.images = imagesMin;
+exports.js = lintJs;
+exports.css = lintCSS;
+exports.html = lintHTML;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
