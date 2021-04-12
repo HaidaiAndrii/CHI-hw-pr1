@@ -169,10 +169,11 @@ h2 {
         margin: 0 auto 20px;
         justify-content: space-around;
         align-items: flex-start;
-        position: relative;
+        //position: relative;
         max-height: max-content;
         &__content {
             flex-direction: column;
+            align-items: flex-start;
         }
         &__title {
             max-width: 458px;
