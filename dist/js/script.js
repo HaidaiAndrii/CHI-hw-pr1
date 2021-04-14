@@ -26,7 +26,7 @@ eye.addEventListener('click', () => {
         eye.style.backgroundImage = "url('../src/img/closedeye.svg')";
     }
 
-}, false);
+});
 
 checkBoxAccept.addEventListener('click', () => {
     buttonSendForm.disabled = !checkBoxAccept.checked;
