@@ -1,4 +1,5 @@
-.container {
+.cardContainer {
+    background-color: #fff;
     padding: 10% 14.85% 150px;
 }
 
@@ -45,6 +46,7 @@ h2 {
 }
 
 .item {
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -259,4 +261,167 @@ h2 {
             color: #2c49c5;
         }
     }
+}
+
+input,
+button {
+    border: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    box-shadow: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+h2,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+button:active {
+    border: none;
+}
+
+body {
+    background-color: #102250;
+}
+
+.container {
+    padding: 10% 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+    max-width: 350px;
+    max-height: max-content;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 5px;
+    &__title {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    &__input {
+        width: 100%;
+        height: 40px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    &__input:focus {
+        outline: none;
+        background-color: #fff;
+    }
+    &__inputSection {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        height: 40px;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    &__icon {
+        display: flex;
+        width: 24px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+    }
+    &__passIcon {
+        background-image: url('../img/padlock.svg');
+        height: 20px;
+    }
+    &__eyeIcon {
+        //background-image: url('../img/eye.svg');
+        background-image: url('../../dist/img/eye.svg');
+    }
+    &__loginIcon {
+        background-image: url('../img/envelope.svg');
+    }
+    &__select {
+        padding-left: 40px;
+        color: #A1A5A9;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+    &__sex {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    &__radioLabel {
+        margin-right: 20px;
+    }
+    &__agreement {
+        margin-bottom: 70px;
+    }
+    &__link {
+        color: #0094FF;
+    }
+    &__submit {
+        width: 100%;
+        text-align: center;
+        background-color: #0094FF;
+        padding: 15px 0;
+        border-radius: 15px;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-size: 18px;
+    }
+    &__submit:disabled {
+        background-color: #A2A2A2;
+        color: #D5D5D5;
+    }
+    &__submit:focus {
+        outline: none;
+    }
+    &__submit:hover {
+        transform: scale(1.05);
+    }
+}
+
+.buttonDisabled {
+    background-color: #A2A2A2;
+    color: #D5D5D5;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.hideError {
+    opacity: 0;
+}
+
+.spanError {
+    display: block;
+    color: red;
+    margin-bottom: 15px;
+    line-height: 10px;
+    font-size: 14px;
 }
