@@ -16,9 +16,9 @@ const checkBoxAccept = document.getElementById('agreement');
 const eye = document.getElementById('eye');
 const form = document.querySelector('.form');
 
-form.addEventListener('click', () => {
+form.addEventListener('change', () => {
     if (inputName.value.length >= 2 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
-        buttonSendForm.classList.remove('buttonDisabled');
+        buttonSendForm.disabled = false;
     }
 })
 
@@ -33,7 +33,6 @@ eye.addEventListener('click', () => {
 })
 
 checkBoxAccept.addEventListener('click', () => {
-    // buttonSendForm.disabled = !buttonSendForm.disabled;
     buttonSendForm.disabled = false;
 })
 
@@ -41,7 +40,9 @@ checkBoxAccept.addEventListener('click', () => {
 const addClassError = (input, element) => {
     input.classList.add('error');
     element.classList.remove('hideError');
-    buttonSendForm.classList.add('buttonDisabled');
+    // buttonSendForm.classList.add('buttonDisabled');
+    buttonSendForm.disabled = true;
+
 };
 
 const removeClassError = (input, element) => {
