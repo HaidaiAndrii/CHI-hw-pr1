@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .container {
-  padding: 0 14.85% 150px;
+  padding: 10% 14.85% 150px;
 }
 
 @font-face {
@@ -128,6 +128,7 @@ h2 {
 
 .item__planTitle {
   font-family: DINPro;
+  text-transform: uppercase;
   font-size: 11px;
   font-weight: 500;
   line-height: 1.45;

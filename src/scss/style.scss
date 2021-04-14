@@ -1,5 +1,5 @@
 .container {
-    padding: 0 14.85% 150px;
+    padding: 10% 14.85% 150px;
 }
 
 @font-face {
@@ -50,7 +50,6 @@ h2 {
     align-items: center;
     padding: 25px 30px 25px 25px;
     border: 2px solid #e4e8f0;
-    //max-height: 136px;
     max-height: max-content;
     &__content {
         display: flex;
@@ -63,8 +62,6 @@ h2 {
         display: none;
     }
     &__logo {
-        //position: relative;
-        //bottom: 5px;
         padding-right: 23px;
     }
     &__preview {
@@ -100,6 +97,7 @@ h2 {
     }
     &__planTitle {
         font-family: DINPro;
+        text-transform: uppercase;
         font-size: 11px;
         font-weight: 500;
         line-height: 1.45;
@@ -137,8 +135,6 @@ h2 {
         max-width: 365px;
         width: 100%;
         padding-right: 50px;
-        // padding-right: 253px;
-        //padding-left: 19px;
     }
     &__button {
         display: flex;
@@ -149,8 +145,6 @@ h2 {
         width: 36px;
         height: 34px;
         border: solid 2px #2c49c5;
-        // position: relative;
-        // top: 22px;
     }
     .download-arrow {
         position: relative;
