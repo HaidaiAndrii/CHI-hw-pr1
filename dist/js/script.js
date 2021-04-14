@@ -20,6 +20,9 @@ form.addEventListener('change', () => {
     if (inputName.value.length >= 2 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
         buttonSendForm.disabled = false;
     }
+    checkName(inputName);
+    checkPassword(inputPassword);
+    checkCountrySelect();
 })
 
 eye.addEventListener('click', () => {
@@ -40,7 +43,6 @@ checkBoxAccept.addEventListener('click', () => {
 const addClassError = (input, element) => {
     input.classList.add('error');
     element.classList.remove('hideError');
-    // buttonSendForm.classList.add('buttonDisabled');
     buttonSendForm.disabled = true;
 
 };
