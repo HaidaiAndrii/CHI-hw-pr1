@@ -28,7 +28,7 @@ eye.addEventListener('click', () => {
         eye.style.backgroundImage = "url('../img/eye.svg')";
     } else {
         inputPassword.type = 'text';
-        eye.style.backgroundImage = "url('../img/closedeye.svg')";
+        eye.style.backgroundImage = "url('/img/closedeye.svg')";
     }
 })
 

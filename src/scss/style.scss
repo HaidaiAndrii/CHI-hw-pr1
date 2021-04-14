@@ -87,7 +87,8 @@
             height: 20px;
         }
         &__eyeIcon {
-            background-image: url('../img/eye.svg');
+            //background-image: url('../img/eye.svg');
+            background-image: url('../../dist/img/eye.svg');
         }
         &__loginIcon {
             background-image: url('../img/envelope.svg');

@@ -91,10 +91,6 @@ body {
   background-color: #fff;
 }
 
-.form__inputSection:focus {
-  background-color: #fff;
-}
-
 .form__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,7 +109,7 @@ body {
 }
 
 .form__eyeIcon {
-  background-image: url("../img/eye.svg");
+  background-image: url("../../dist/img/eye.svg");
 }
 
 .form__loginIcon {
