@@ -8,7 +8,6 @@ const loginSpan = document.getElementById('loginError');
 const passSpan = document.getElementById('passError');
 const selectSpan = document.getElementById('selectError');
 
-
 const passSection = document.querySelector('.pass');
 const loginSection = document.querySelector('.login');
 const optionCountry = document.getElementById('select');

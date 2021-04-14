@@ -403,8 +403,12 @@ body {
   font-size: 14px;
 }
 
+.spanError {
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 1250px) {
-  .container {
+  .cardContainer {
     padding: 0 39px 150px;
   }
 
@@ -465,7 +469,7 @@ body {
   }
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 900px) {
   .item {
     max-width: 320px;
   }
@@ -548,5 +552,65 @@ body {
     line-height: 1.43;
     letter-spacing: 0.4px;
     color: #2c49c5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 5% 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .form {
+    padding: 20px 15px;
+    max-width: 350px;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+
+  .form__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .form__inputSection {
+    margin-bottom: 10px;
+  }
+
+  .form__select {
+    margin-bottom: 10px;
+  }
+
+  .form__sex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .form__radioLabel {
+    margin-bottom: 5px;
+  }
+
+  .form__agreement {
+    margin-bottom: 25px;
   }
 }
