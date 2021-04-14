@@ -54,7 +54,7 @@ const checkName = (login) => {
 };
 
 const checkPassword = (password) => {
-    if (password.value.length <= 6) {
+    if (password.value.trim().length <= 6) {
         addClassError(passSection, passSpan);
     } else if (password.value.length > 6) {
         removeClassError(passSection, passSpan);
@@ -77,7 +77,7 @@ buttonSendForm.addEventListener('click', () => {
 });
 
 form.addEventListener('change', () => {
-    if (inputName.value.length > 0 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
+    if (inputName.value.trim().length > 0 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
         buttonSendForm.disabled = false;
     }
     if (checkBoxAccept.checked) {
@@ -86,3 +86,14 @@ form.addEventListener('change', () => {
         checkCountrySelect();
     }
 })
+
+function validationLogin() {
+    this.value = this.value.replace(/\s+/g, ' ');
+}
+
+function validationPassword() {
+    this.value = this.value.trim().replace(/\s+/g, '');
+}
+
+inputName.addEventListener('input', validationLogin);
+inputPassword.addEventListener('input', validationPassword);
