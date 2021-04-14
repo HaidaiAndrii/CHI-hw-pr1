@@ -293,6 +293,7 @@ body {
     }
     &__eyeIcon {
         //background-image: url('../img/eye.svg');
+        // z-index: 5;
         background-image: url('../../dist/img/eye.svg');
     }
     &__loginIcon {

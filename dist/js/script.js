@@ -15,10 +15,39 @@ const checkBoxAccept = document.getElementById('agreement');
 const eye = document.getElementById('eye');
 const form = document.querySelector('.formPart-listener');
 
+
+eye.addEventListener('click', () => {
+    if (inputPassword.type === 'text') {
+        inputPassword.type = 'password';
+        eye.style.backgroundImage = "url('../img/eye.svg')";
+    } else {
+        inputPassword.type = 'text';
+        eye.style.backgroundImage = "url('/img/closedeye.svg')";
+    }
+
+}, false);
+
+checkBoxAccept.addEventListener('click', () => {
+    buttonSendForm.disabled = !checkBoxAccept.checked;
+})
+
+
+const addClassError = (input, element) => {
+    input.classList.add('error');
+    element.classList.remove('hideError');
+    buttonSendForm.disabled = true;
+
+};
+
+const removeClassError = (input, element) => {
+    input.classList.remove('error');
+    element.classList.add('hideError');
+};
+
 const checkName = (login) => {
     if (login.value === '') {
         addClassError(loginSection, loginSpan);
-    } else if (login.value.length >= 2) {
+    } else if (login.value.length > 0) {
         removeClassError(loginSection, loginSpan);
 
     }
@@ -40,44 +69,20 @@ const checkCountrySelect = () => {
     }
 }
 
-form.addEventListener('change', () => {
-    if (inputName.value.length >= 2 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
-        buttonSendForm.disabled = false;
-    }
+
+buttonSendForm.addEventListener('click', () => {
     checkName(inputName);
     checkPassword(inputPassword);
     checkCountrySelect();
-})
+});
 
-eye.addEventListener('click', () => {
-    if (inputPassword.type === 'text') {
-        inputPassword.type = 'password';
-        eye.style.backgroundImage = "url('../img/eye.svg')";
-    } else {
-        inputPassword.type = 'text';
-        eye.style.backgroundImage = "url('/img/closedeye.svg')";
+form.addEventListener('change', () => {
+    if (inputName.value.length > 0 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
+        buttonSendForm.disabled = false;
+    }
+    if (checkBoxAccept.checked) {
+        checkName(inputName);
+        checkPassword(inputPassword);
+        checkCountrySelect();
     }
 })
-
-checkBoxAccept.addEventListener('click', () => {
-    buttonSendForm.disabled = false;
-})
-
-
-const addClassError = (input, element) => {
-    input.classList.add('error');
-    element.classList.remove('hideError');
-    buttonSendForm.disabled = true;
-
-};
-
-const removeClassError = (input, element) => {
-    input.classList.remove('error');
-    element.classList.add('hideError');
-};
-
-
-buttonSendForm.addEventListener('click', () => {
-            checkName(inputName);
-            checkPassword(inputPassword);
-            checkCountrySelect();

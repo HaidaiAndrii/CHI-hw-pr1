@@ -24,10 +24,11 @@ eye.addEventListener('click', () => {
         inputPassword.type = 'text';
         eye.style.backgroundImage = "url('/img/closedeye.svg')";
     }
-})
+
+}, false);
 
 checkBoxAccept.addEventListener('click', () => {
-    buttonSendForm.disabled = false;
+    buttonSendForm.disabled = !checkBoxAccept.checked;
 })
 
 
@@ -43,6 +44,31 @@ const removeClassError = (input, element) => {
     element.classList.add('hideError');
 };
 
+const checkName = (login) => {
+    if (login.value === '') {
+        addClassError(loginSection, loginSpan);
+    } else if (login.value.length > 0) {
+        removeClassError(loginSection, loginSpan);
+
+    }
+};
+
+const checkPassword = (password) => {
+    if (password.value.length <= 6) {
+        addClassError(passSection, passSpan);
+    } else if (password.value.length > 6) {
+        removeClassError(passSection, passSpan);
+    }
+};
+
+const checkCountrySelect = () => {
+    if (optionCountry.value === 'country') {
+        addClassError(optionCountry, selectSpan);
+    } else {
+        removeClassError(optionCountry, selectSpan);
+    }
+}
+
 
 buttonSendForm.addEventListener('click', () => {
     checkName(inputName);
@@ -51,10 +77,12 @@ buttonSendForm.addEventListener('click', () => {
 });
 
 form.addEventListener('change', () => {
-    if (inputName.value.length >= 2 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
+    if (inputName.value.length > 0 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
         buttonSendForm.disabled = false;
     }
-    checkName(inputName);
-    checkPassword(inputPassword);
-    checkCountrySelect();
+    if (checkBoxAccept.checked) {
+        checkName(inputName);
+        checkPassword(inputPassword);
+        checkCountrySelect();
+    }
 })
