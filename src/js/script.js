@@ -17,12 +17,13 @@ const form = document.querySelector('.formPart-listener');
 
 
 eye.addEventListener('click', () => {
+
     if (inputPassword.type === 'text') {
         inputPassword.type = 'password';
         eye.style.backgroundImage = "url('../src/img/eye.svg')";
     } else {
         inputPassword.type = 'text';
-        eye.style.backgroundImage = "url('..s/rc/img/closedeye.svg')";
+        eye.style.backgroundImage = "url('../src/img/closedeye.svg')";
     }
 
 }, false);
