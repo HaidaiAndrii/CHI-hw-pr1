@@ -230,23 +230,25 @@
         <form class="form">
             <h2 class="form__title">Create a new account</h2>
 
-            <div class="form__inputSection login">
-                <label class="form__loginIcon form__icon" for="login"></label>
-                <input type="login" placeholder="Login" class="form__input" id="login" />
-            </div>
-            <span class="hideError spanError" id="loginError">Required field</span>
+            <div class="formPart-listener">
+
+                <div class="form__inputSection login">
+                    <label class="form__loginIcon form__icon" for="login"></label>
+                    <input type="login" placeholder="Login" class="form__input" id="login" />
+                </div>
+                <span class="hideError spanError" id="loginError">Required field</span>
 
 
-            <div class="form__inputSection pass">
-                <label class="form__icon form__passIcon" for="password">
+                <div class="form__inputSection pass">
+                    <label class="form__icon form__passIcon" for="password">
                 </label>
-                <input type="password" placeholder="*******" class="form__input" id="password" />
-                <label class="form__eyeIcon form__icon" id="eye">
+                    <input type="password" placeholder="*******" class="form__input" id="password" />
+                    <label class="form__eyeIcon form__icon" id="eye">
                 </label>
-            </div>
-            <span class="hideError spanError" id="passError">Required field</span>
+                </div>
+                <span class="hideError spanError" id="passError">Required field</span>
 
-            <select class="form__select form__input" id="select">
+                <select class="form__select form__input" id="select">
                 <option disabled  value="country" selected>Country</option>
                 <option value="Ukraine">Ukraine</option>
                 <option value="USA">USA</option>
@@ -259,17 +261,20 @@
                 <option value="United Kingdom">United Kingdom</option>
                 <option value="Netherlands">Netherlands</option>
             </select>
-            <span class="hideError spanError" id="selectError">Required field</span>
-            <div class="form__sex">
-                <label class="form__radioLabel">
+                <span class="hideError spanError" id="selectError">Required field</span>
+                <div class="form__sex">
+                    <label class="form__radioLabel">
                     <input type="radio" class="form__radio" name="sex" checked>
                     Male
                 </label>
-                <label class="form__radioLabel">
+                    <label class="form__radioLabel">
                     <input type="radio" class="form__radio" name="sex">
                     Female
                 </label>
+                </div>
+
             </div>
+
 
             <label class="form__agreement">
                 <input type="checkbox" id="agreement">
