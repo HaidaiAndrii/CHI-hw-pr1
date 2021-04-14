@@ -23,8 +23,8 @@ eye.addEventListener('click', () => {
         eye.style.backgroundImage = "url('../src/img/eye.svg')";
     } else {
         inputPassword.type = 'text';
+        eye.style.backgroundImage = "url('../src/img/closedeye.svg')";
     }
-
 });
 
 checkBoxAccept.addEventListener('click', () => {

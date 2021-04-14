@@ -25,7 +25,6 @@ eye.addEventListener('click', () => {
         inputPassword.type = 'text';
         eye.style.backgroundImage = "url('../src/img/closedeye.svg')";
     }
-
 });
 
 checkBoxAccept.addEventListener('click', () => {
