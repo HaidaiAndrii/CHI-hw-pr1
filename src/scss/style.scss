@@ -272,7 +272,7 @@ body {
         overflow: hidden;
         height: 40px;
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 40px;
         padding: 0 10px;
         border: 1px solid gray;
         border-radius: 5px;
@@ -300,7 +300,7 @@ body {
     &__select {
         padding-left: 40px;
         color: #A1A5A9;
-        margin-bottom: 15px;
+        margin-bottom: 40px;
         border-radius: 5px;
     }
     &__sex {
@@ -352,16 +352,17 @@ body {
     border: 1px solid red;
 }
 
-.hideError {
-    opacity: 0;
-}
-
 .spanError {
     display: block;
     color: red;
-    margin-bottom: 15px;
     line-height: 10px;
     font-size: 14px;
+    margin-top: -25px;
+    margin-bottom: 15px;
+}
+
+.hideError {
+    display: none;
 }
 
 @media screen and (max-width: 900px) {
@@ -463,8 +464,4 @@ body {
             margin-bottom: 25px;
         }
     }
-}
-
-.spanError {
-    margin-bottom: 10px;
 }

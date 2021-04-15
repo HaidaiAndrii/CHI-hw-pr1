@@ -95,5 +95,7 @@ function validationPassword() {
     this.value = this.value.trim().replace(/\s+/g, '');
 }
 
-inputName.addEventListener('input', validationLogin);
+inputName.addEventListener('input', () => {
+
+}));
 inputPassword.addEventListener('input', validationPassword);
