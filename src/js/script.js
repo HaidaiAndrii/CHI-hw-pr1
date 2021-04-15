@@ -54,9 +54,9 @@ const checkName = (login) => {
 };
 
 const checkPassword = (password) => {
-    if (password.value.trim().length <= 6) {
+    if (password.value.trim().length === 0) {
         addClassError(passSection, passSpan);
-    } else if (password.value.length > 6) {
+    } else if (password.value.length > 0) {
         removeClassError(passSection, passSpan);
     }
 };
