@@ -1,19 +1,23 @@
 'use strict';
 
-const buttonSendForm = document.getElementById('submit');
-const inputName = document.getElementById('login');
-const inputPassword = document.getElementById('password');
-
-const loginSpan = document.getElementById('loginError');
-const passSpan = document.getElementById('passError');
-const selectSpan = document.getElementById('selectError');
-
+const inputName = document.querySelector('.js-input-login');
+const buttonSendForm = document.querySelector('.form__submit');
+const inputPassword = document.querySelector('.js-input-pass');
 const passSection = document.querySelector('.pass');
 const loginSection = document.querySelector('.login');
-const optionCountry = document.getElementById('select');
-const checkBoxAccept = document.getElementById('agreement');
-const eye = document.getElementById('eye');
-const form = document.querySelector('.formPart-listener');
+const formInputSection = document.querySelector('.js-formPart-listener');
+const loginSpan = document.querySelector('.js-login-error');
+const passSpan = document.querySelector('.js-pass-error');
+const selectSpan = document.querySelector('.js-select-error');
+const optionCountry = document.querySelector('.form__inputSection-select');
+const checkBoxAccept = document.querySelector('.checkbox');
+const eye = document.querySelector('.form__eyeIcon');
+const select = document.querySelector('.form__select');
+const form = document.querySelector('.form');
+
+let isNameValidated = false;
+let isPassValidated = false;
+let isSelectValidated = false;
 
 
 eye.addEventListener('click', () => {
@@ -47,37 +51,36 @@ const removeClassError = (input, element) => {
 const checkName = (login) => {
     if (login.value === '') {
         addClassError(loginSection, loginSpan);
-    } else if (login.value.length > 0) {
+        isNameValidated = false;
+    } else {
+        isNameValidated = true;
         removeClassError(loginSection, loginSpan);
-
     }
 };
 
 const checkPassword = (password) => {
     if (password.value.trim().length === 0) {
+        isPassValidated = false;
         addClassError(passSection, passSpan);
-    } else if (password.value.length > 0) {
+    } else {
+        isPassValidated = true;
         removeClassError(passSection, passSpan);
     }
 };
 
 const checkCountrySelect = () => {
-    if (optionCountry.value === 'country') {
+    if (select.value === 'country') {
+        isSelectValidated = false;
         addClassError(optionCountry, selectSpan);
     } else {
+        isSelectValidated = true;
         removeClassError(optionCountry, selectSpan);
     }
 }
 
 
-buttonSendForm.addEventListener('click', () => {
-    checkName(inputName);
-    checkPassword(inputPassword);
-    checkCountrySelect();
-});
-
-form.addEventListener('change', () => {
-    if (inputName.value.trim().length > 0 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
+formInputSection.addEventListener('change', () => {
+    if (checkBoxAccept.checked) {
         buttonSendForm.disabled = false;
     }
     if (checkBoxAccept.checked) {
@@ -87,8 +90,29 @@ form.addEventListener('change', () => {
     }
 })
 
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    checkName(inputName);
+    checkPassword(inputPassword);
+    checkCountrySelect();
+
+    if (isNameValidated && isPassValidated && isSelectValidated && checkBoxAccept.checked) {
+        alert('Succes');
+        console.log(select.value)
+        inputName.value = '';
+        inputPassword.value = '';
+        select.value = 'country';
+        checkBoxAccept.checked = false;
+        buttonSendForm.disabled = true;
+    }
+})
+
+
+
 function validationLogin() {
     this.value = this.value.replace(/\s+/g, ' ');
+    this.value = this.value.replace(/[^a-zA-Zа-яА-ЯЁёІі\s0-9`]/g, '');
 }
 
 function validationPassword() {
