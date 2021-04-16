@@ -323,6 +323,9 @@ body {
     &__eyeIcon {
         background-image: url('../img/eye.svg');
     }
+    &__eyeIcon-not-active {
+        background-image: url('../img/closedeye.svg');
+    }
     &__loginIcon {
         background-image: url('../img/envelope.svg');
     }

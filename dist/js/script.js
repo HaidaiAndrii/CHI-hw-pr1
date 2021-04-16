@@ -24,10 +24,10 @@ eye.addEventListener('click', () => {
 
     if (inputPassword.type === 'text') {
         inputPassword.type = 'password';
-        eye.style.backgroundImage = "url('../src/img/eye.svg')";
+        eye.classList.remove('form__eyeIcon-not-active');
     } else {
         inputPassword.type = 'text';
-        eye.style.backgroundImage = "url('../src/img/closedeye.svg')";
+        eye.classList.add('form__eyeIcon-not-active');
     }
 });
 
