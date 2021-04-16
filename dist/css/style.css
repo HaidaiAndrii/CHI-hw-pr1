@@ -348,16 +348,16 @@ body {
 }
 
 .form__passIcon {
-  background-image: url("../dist/img/padlock.svg");
+  background-image: url("./src/img/padlock.svg");
   height: 20px;
 }
 
 .form__eyeIcon {
-  background-image: url("../dist/img/eye.svg");
+  background-image: url("./src/img/eye.svg");
 }
 
 .form__loginIcon {
-  background-image: url("../dist/img/envelope.svg");
+  background-image: url("./img/envelope.svg");
 }
 
 .form__sex {

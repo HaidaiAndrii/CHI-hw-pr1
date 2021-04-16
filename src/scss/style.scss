@@ -317,14 +317,14 @@ body {
         opacity: 0.5;
     }
     &__passIcon {
-        background-image: url('../src/img/padlock.svg');
+        background-image: url('./src/img/padlock.svg');
         height: 20px;
     }
     &__eyeIcon {
-        background-image: url('../../dist/img/eye.svg');
+        background-image: url('./src/img/eye.svg');
     }
     &__loginIcon {
-        background-image: url('../dist/img/envelope.svg');
+        background-image: url('./img/envelope.svg');
     }
     &__sex {
         display: flex;
