@@ -14,6 +14,12 @@ const checkBoxAccept = document.querySelector('.checkbox');
 const eye = document.querySelector('.form__eyeIcon');
 const select = document.querySelector('.form__select');
 const form = document.querySelector('.form');
+const selectWrapper = document.querySelector('.form__inputSection-select');
+
+selectWrapper.addEventListener('click' () => {
+
+})
+
 
 let isNameValidated = false;
 let isPassValidated = false;
