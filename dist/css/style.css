@@ -277,6 +277,7 @@ body {
 }
 
 .form__inputSection-select {
+  cursor: pointer;
   width: 100%;
   height: 40px;
   width: 100%;
@@ -291,13 +292,14 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .form__select {
   border: none;
   width: 100%;
+  height: 100%;
   color: #A1A5A9;
-  border-radius: 5px;
 }
 
 .form__select:focus,
@@ -346,16 +348,16 @@ body {
 }
 
 .form__passIcon {
-  background-image: url("../img/padlock.svg");
+  background-image: url("../dist/img/padlock.svg");
   height: 20px;
 }
 
 .form__eyeIcon {
-  background-image: url("../../dist/img/eye.svg");
+  background-image: url("../dist/img/eye.svg");
 }
 
 .form__loginIcon {
-  background-image: url("../img/envelope.svg");
+  background-image: url("../dist/img/envelope.svg");
 }
 
 .form__sex {
@@ -612,10 +614,6 @@ body {
     margin-bottom: 30px;
     text-align: center;
     font-size: 16px;
-  }
-
-  .form__select {
-    margin-bottom: 10px;
   }
 
   .form__sex {
