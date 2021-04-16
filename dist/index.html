@@ -227,68 +227,40 @@
     </section>
     <div class="container">
 
-        <form class="form">
-            <h2 class="form__title">Create a new account</h2>
-
-            <div class="formPart-listener">
-
-                <div class="form__inputSection login">
-                    <label class="form__loginIcon form__icon" for="login"></label>
-                    <input type="login" placeholder="Login" class="form__input" id="login" />
+        <div class="flickity-container">
+            <div class="hand">
+                <div class="card card-1">
+                    <h2 class="title">Basic level</h2>
+                    <ul class="card-lists">
+                        <li class="card-item">HTML/CSS/JavaScript</li>
+                        <li class="card-item">Internet basics</li>
+                        <li class="card-item">Dev tools basics</li>
+                    </ul>
+                    <p>See more</p>
+                    <p class="side">Next card1</p>
                 </div>
-                <span class="hideError spanError" id="loginError">Required field</span>
-
-
-                <div class="form__inputSection pass">
-                    <label class="form__icon form__passIcon" for="password">
-                </label>
-                    <input type="password" placeholder="*******" class="form__input" id="password" />
-                    <label class="form__eyeIcon form__icon" id="eye">
-                </label>
+                <div class="card card-2">
+                    <h2 class="title">Basic level</h2>
+                    <ul class="card-lists">
+                        <li class="card-item">HTML/CSS/JavaScript</li>
+                        <li class="card-item">Internet basics</li>
+                        <li class="card-item">Dev tools basics</li>
+                    </ul>
+                    <p>See more</p>
+                    <p class="side">Next card2</p>
                 </div>
-                <span class="hideError spanError" id="passError">Required field</span>
-
-                <select class="form__select form__input" id="select">
-                <option disabled  value="country" selected>Country</option>
-                <option value="Ukraine">Ukraine</option>
-                <option value="USA">USA</option>
-                <option value="Mexica">Mexica</option>
-                <option value="Canada">Canada</option>
-                <option value="Japan">Japan</option>
-                <option value="Australia">Australia</option>
-                <option value="Sweden">Sweden</option>
-                <option value="Switzerland">Switzerland</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Netherlands">Netherlands</option>
-            </select>
-                <span class="hideError spanError" id="selectError">Required field</span>
-                <div class="form__sex">
-                    <label class="form__radioLabel">
-                    <input type="radio" class="form__radio" name="sex" checked>
-                    Male
-                </label>
-                    <label class="form__radioLabel">
-                    <input type="radio" class="form__radio" name="sex">
-                    Female
-                </label>
+                <div class="card card-3">
+                    <h2 class="title">Basic level</h2>
+                    <ul class="card-lists">
+                        <li class="card-item">HTML/CSS/JavaScript</li>
+                        <li class="card-item">Internet basics</li>
+                        <li class="card-item">Dev tools basics</li>
+                    </ul>
+                    <p>See more</p>
+                    <p class="side">Next card3</p>
                 </div>
-
             </div>
-
-
-            <label class="form__agreement">
-                <input type="checkbox" id="agreement">
-                Accept
-                <a href="#" class="form__link">terms</a>
-                and
-                <a href="#" class="form__link">conditions</a>
-            </label>
-
-            <button type="button" class="form__submit" id="submit" disabled>
-                Sign Up
-            </button>
-
-        </form>
+        </div>
     </div>
     <script src="js/script.min.js"></script>
 </body>
