@@ -295,6 +295,120 @@
             </button>
 
         </form>
+
+
+
+        <div class="clock-wrapper">
+            <svg version="1.1" class="iconic-clock" x="0px" y="0px" width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+                <path class="iconic-clock-frame"/>
+                <circle cx="200" cy="200" r="160"stroke="white" stroke-width="4" fill="orange" />
+                <line class="animation-clock-arrow-minute"  id="animation-clock-arrow-minute" fill="white" stroke="#fff" stroke-width="12" transform-origin="0 0" stroke-miterlimit="10" x1="200" y1="220" x2="200" y2="54"/>
+                <line class="animation-clock-arrow-hour"  id="animation-clock-arrow-hour" fill="white" stroke="#fff" stroke-width="18" transform-origin="0 0" stroke-miterlimit="10" x1="200" y1="220" x2="200" y2="90"/>
+
+             <circle cx="200" cy="200" r="2" stroke="white" fill="black"/>
+                <defs>
+                  <animateTransform
+                        type="rotate"
+                        restart="always"
+                        calcMode="linear"
+                        xlink:href="#animation-clock-arrow-hour"
+                        repeatCount="indefinite"
+                        dur="60s"
+                        to="360 200 200"
+                        from="0 200 200"
+                        attributeName="transform"
+                    </animateTransform>
+              
+                  <animateTransform
+                        type="rotate"
+                        restart="always"
+                        calcMode="linear"
+                        xlink:href="#animation-clock-arrow-minute"
+                        repeatCount="indefinite"
+                        dur="5s"
+                        to="360 200 200"
+                        from="0 200 200"
+                        attributeName="transform"
+                  </animateTransform>
+              
+                
+                </defs>
+              </svg>
+        </div>
+
+        <div class=" timer-wrapper">
+
+
+            <svg id="svg1" xmlns="http://www.w3.org/2000/svg" class="timerSVG" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 120 120">  
+      <rect width="100%" height="100%" fill="black" />
+      <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="8"/>
+      <circle cx="60" cy="60" r="50" transform="rotate(0 60 60)" fill="none" transform="rotate(90 60 90)"  class="dashCircle" stroke-dashoffset="314" stroke-dasharray="314"  stroke="#ff9900" stroke-width="8" >
+          <animate attributeName="stroke-dashoffset" class="dash" fill='freeze' dur="1.5s"  values="314" /> 
+        </circle>
+        <text class="validPercent" x="50%" y="50%" fill="white" text-anchor="middle" dy="7" font-size="20">%</text>
+        
+    </svg>
+
+            <form onsubmit="return false;">
+                <span class="timer-input-span">Type a percent</span><input type="number" class="input-dash" />
+            </form>
+        </div>
+
+
+        <div class="modal-wrapper">
+            <div class="main-modal js-modal">
+                <div class="modal-text">
+                    <h4 class="modal-title">Delete this item?</h4>
+                    <p class="modal-paragraph">
+                        This operation will premenantly delete this item and all its dependencies. This action
+                        <span class="bold-text">cannot be undone.</span>
+                    </p>
+                </div>
+
+                <div class="modal-button-wrapper">
+                    <button class="modal-button-close modal-btn-general js-close">Oh no, bring me back</button>
+                    <button class="modal-button-delete modal-btn-general js-delete"> I understand, delete it</button>
+                </div>
+            </div>
+            <div class="modal-mainButton-box">
+                <button class="modal-main-button js-modal-btn">Delete</button>
+            </div>
+        </div>
+
+        <div class="flickity-container">
+            <div class="hand">
+                <div class="card card-1">
+                    <h2 class="title">Basic level</h2>
+                    <ul class="card-lists">
+                        <li class="card-item">HTML/CSS/JavaScript</li>
+                        <li class="card-item">Internet basics</li>
+                        <li class="card-item">Dev tools basics</li>
+                    </ul>
+                    <p>See more</p>
+                    <p class="side">Next card1</p>
+                </div>
+                <div class="card card-2">
+                    <h2 class="title">Basic level</h2>
+                    <ul class="card-lists">
+                        <li class="card-item">HTML/CSS/JavaScript</li>
+                        <li class="card-item">Internet basics</li>
+                        <li class="card-item">Dev tools basics</li>
+                    </ul>
+                    <p>See more</p>
+                    <p class="side">Next card2</p>
+                </div>
+                <div class="card card-3">
+                    <h2 class="title">Basic level</h2>
+                    <ul class="card-lists">
+                        <li class="card-item">HTML/CSS/JavaScript</li>
+                        <li class="card-item">Internet basics</li>
+                        <li class="card-item">Dev tools basics</li>
+                    </ul>
+                    <p>See more</p>
+                    <p class="side">Next card3</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/script.min.js"></script>
 </body>

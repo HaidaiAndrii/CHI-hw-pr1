@@ -250,7 +250,7 @@ body {
     max-width: 400px;
     max-height: max-content;
     background-color: #fff;
-    margin: 0 auto;
+    margin: 100px auto;
     border-radius: 5px;
     &__title {
         margin-bottom: 60px;
@@ -492,3 +492,6 @@ body {
         }
     }
 }
+
+//@import url(./animation.scss);
+@import './animation.scss';
