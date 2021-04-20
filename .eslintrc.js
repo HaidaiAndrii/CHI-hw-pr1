@@ -9,6 +9,7 @@ module.exports = {
         'prettier/prettier': ['error'],
     },
     "rules": {
+        "no-param-reassign": 0,
         "eol-last": ["error", "never"]
     }
 };
