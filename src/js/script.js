@@ -1,99 +1,70 @@
 'use strict';
 
-const buttonSendForm = document.getElementById('submit');
-const inputName = document.getElementById('login');
-const inputPassword = document.getElementById('password');
+const percent = document.querySelector('.input-dash');
+const dashField = document.querySelector('.dash');
+const textPercent = document.querySelector('.validPercent');
 
-const loginSpan = document.getElementById('loginError');
-const passSpan = document.getElementById('passError');
-const selectSpan = document.getElementById('selectError');
-
-const passSection = document.querySelector('.pass');
-const loginSection = document.querySelector('.login');
-const optionCountry = document.getElementById('select');
-const checkBoxAccept = document.getElementById('agreement');
-const eye = document.getElementById('eye');
-const form = document.querySelector('.formPart-listener');
-
-
-eye.addEventListener('click', () => {
-
-    if (inputPassword.type === 'text') {
-        inputPassword.type = 'password';
-        eye.style.backgroundImage = "url('../src/img/eye.svg')";
-    } else {
-        inputPassword.type = 'text';
-        eye.style.backgroundImage = "url('../src/img/closedeye.svg')";
-    }
-});
-
-checkBoxAccept.addEventListener('click', () => {
-    buttonSendForm.disabled = !checkBoxAccept.checked;
-})
-
-
-const addClassError = (input, element) => {
-    input.classList.add('error');
-    element.classList.remove('hideError');
-    buttonSendForm.disabled = true;
-
-};
-
-const removeClassError = (input, element) => {
-    input.classList.remove('error');
-    element.classList.add('hideError');
-};
-
-const checkName = (login) => {
-    if (login.value === '') {
-        addClassError(loginSection, loginSpan);
-    } else if (login.value.length > 0) {
-        removeClassError(loginSection, loginSpan);
-
-    }
-};
-
-const checkPassword = (password) => {
-    if (password.value.trim().length === 0) {
-        addClassError(passSection, passSpan);
-    } else if (password.value.length > 0) {
-        removeClassError(passSection, passSpan);
-    }
-};
-
-const checkCountrySelect = () => {
-    if (optionCountry.value === 'country') {
-        addClassError(optionCountry, selectSpan);
-    } else {
-        removeClassError(optionCountry, selectSpan);
-    }
-}
-
-
-buttonSendForm.addEventListener('click', () => {
-    checkName(inputName);
-    checkPassword(inputPassword);
-    checkCountrySelect();
-});
-
-form.addEventListener('change', () => {
-    if (inputName.value.trim().length > 0 && inputPassword.value.length > 6 && optionCountry.value !== 'country' && checkBoxAccept.checked) {
-        buttonSendForm.disabled = false;
-    }
-    if (checkBoxAccept.checked) {
-        checkName(inputName);
-        checkPassword(inputPassword);
-        checkCountrySelect();
+percent.addEventListener('change', () => {
+    let prevVal = dashField.attributes["values"].nodeValue;
+    let inputP = parseInt(percent.value);
+    console.log(inputP);
+    dashField.beginElement();
+    if (inputP >= 0 && inputP < 100) {
+        if (prevVal.split(';')[1] !== undefined) {
+            dashField.attributes["values"].nodeValue = `${prevVal.split(';')[1]}; ${314 - Math.round(inputP*3.14)}`;
+        } else if (percent.value && parseInt(percent.value) < 314) {
+            dashField.attributes["values"].nodeValue = `314; ${314 - Math.round(inputP*3.14)}`;
+        }
+        textPercent.innerHTML = `${inputP}%`;
     }
 })
 
-function validationLogin() {
-    this.value = this.value.replace(/\s+/g, ' ');
+function setPosition() {
+    let date = new Date;
+    let minutes = date.getMinutes();
+    let hours = 18;
+    hours = (hours > 12) ? hours - 12 : hours;
+    minutes = (minutes * 60);
+    hours = (hours * 3600) + minutes;
+    document.querySelector('.animation-clock-arrow-minute').setAttribute('transform', 'rotate(' + 360 * (minutes / 3600) + ',200,200)');
+    document.querySelector('.animation-clock-arrow-hour').setAttribute('transform', 'rotate(' + 360 * (hours / 43200) + ',200,200)');
 }
 
-function validationPassword() {
-    this.value = this.value.trim().replace(/\s+/g, '');
-}
 
-inputName.addEventListener('input', validationLogin);
-inputPassword.addEventListener('input', validationPassword);
+
+const mainButton = document.querySelector('.js-modal-btn');
+const modalWindow = document.querySelector('.js-modal');
+const closeButton = document.querySelector('.js-close');
+const deleteButton = document.querySelector('.js-delete');
+
+const closeElement = (element) => {
+    element.style.display = 'none';
+};
+const openModalWindow = (element) => {
+    element.style.display = 'block';
+};
+
+const openMainButton = (element) => {
+    element.style.display = 'block';
+};
+
+const animateBtnWhenCloseModal = (element) => {
+    element.classList.add('active');
+};
+
+mainButton.addEventListener('click', () => {
+    openModalWindow(modalWindow);
+    closeElement(mainButton);
+});
+
+closeButton.addEventListener('click', () => {
+    closeElement(modalWindow);
+    openMainButton(mainButton);
+    animateBtnWhenCloseModal(mainButton);
+});
+
+deleteButton.addEventListener('click', () => {
+    closeElement(modalWindow);
+    openMainButton(mainButton);
+    animateBtnWhenCloseModal(mainButton);
+});

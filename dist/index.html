@@ -12,220 +12,86 @@
 </head>
 
 <body>
-    <section class="cardContainer">
 
-        <div class="items">
-
-            <div class="item item-wrapper">
-
-                <div class="item__content">
-
-                    <div class="item__preview">
-                        <div class="item__logo">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
-                            <g fill="none" fill-rule="nonzero">
-                                <path stroke="#EF3E42" stroke-width="2" d="M21 1.414L1.414 21 21 40.586 40.586 21 21 1.414z" />
-                                <path fill="#EF3E42" d="M21 13c1.518 0 2.894.617 3.89 1.613a5.492 5.492 0 0 1 1.61 3.894c0 1.059-.65 2.656-1.503 4.284-1.594 3.043-3.902 6.205-3.996 6.209-.076 0-1.421-1.82-2.762-4.029-1.34-2.208-2.676-4.804-2.737-6.357-.002-.037-.002-.072-.002-.107 0-1.52.617-2.898 1.612-3.894A5.481 5.481 0 0 1 21 13zm1.588 4.16a2.236 2.236 0 0 0-1.586-.659 2.241 2.241 0 0 0-2.245 2.247 2.241 2.241 0 0 0 2.245 2.248c.618 0 1.18-.251 1.586-.658.408-.406.66-.968.66-1.59 0-.62-.252-1.182-.66-1.589z"
-                                />
-                            </g>
-                        </svg>
-                        </div>
-                        <div>
-                            <h2 class="item__title">
-                                Plymouth Meeting, Pennsylvania Testing Laboratory
-                            </h2>
-                            <div class="item__info">
-                                <p class="item__subtitle">60 miles</p>
-                                <p class="item__details"><a href="">View details</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item__plans">
-                        <p class="item__planTitle">
-                            Turn Around Time:
-                        </p>
-                        <form class="item__planList">
-                            <label class="item__plan">
-                                <div class="item__button">
-                                    <input class="item__radioButton" id="firstRadio1" name="choosePlan" type="radio" />
-                                    <span class="item__radioLabel">1 Day</span>
-                    </div>
-                    <p class="item__price">$ 1200.00</p>
-                    </label>
-                            <label class="item__plan">
-                                <div class="item__button">
-                                    <input class="item__radioButton" name="choosePlan" id="secondRadio1" type="radio" />
-                                    <span class="item__radioLabel">2 Days</span>
-                    </div>
-                    <p class="item__price">$ 900.50</p>
-                    </label>
-                            <label class="item__plan">
-                                <div class="item__button">
-                                    <input class="item__radioButton" name="choosePlan" id="thiedRadio1" type="radio" />
-                                    <span class="item__radioLabel">1 Week</span>
-                    </div>
-                    <p class="item__price">$ 150.00</p>
-                    </label>
-                            <div class="item__link"><a href="">View more</a></div>
-                        </form>
-                    </div>
-                </div>
+    <div class="container">
 
 
-                <div class="item__download">
-                    <a href="">
-                        <svg class="download-arrow" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="5px" y="5px" viewBox="0 0 31.479 31.479" width="16" height="16px" style="enable-background:new 0 0 31.479 31.479;" xml:space="preserve">
-                            <path style="fill:#2c49c5;" d="M26.485,21.206c0.429-0.444,0.429-1.143,0-1.587c-0.444-0.429-1.159-0.429-1.587,0l-8.047,8.047
-	                        V1.111C16.851,0.492,16.359,0,15.74,0c-0.619,0-1.127,0.492-1.127,1.111v26.555l-8.031-8.047c-0.444-0.429-1.143-0.429-1.587,0
-	                        c-0.429,0.444-0.429,1.143,0,1.587l9.952,9.952c0.429,0.429,1.143,0.429,1.587,0L26.485,21.206z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
+        <div class="clock-wrapper">
+            <svg version="1.1" class="iconic-clock" x="0px" y="0px" width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+                <path class="iconic-clock-frame"/>
+                <circle cx="200" cy="200" r="160"stroke="white" stroke-width="4" fill="orange" />
+                <line class="animation-clock-arrow-minute"  id="animation-clock-arrow-minute" fill="white" stroke="#fff" stroke-width="12" transform-origin="0 0" stroke-miterlimit="10" x1="200" y1="220" x2="200" y2="54"/>
+                <line class="animation-clock-arrow-hour"  id="animation-clock-arrow-hour" fill="white" stroke="#fff" stroke-width="18" transform-origin="0 0" stroke-miterlimit="10" x1="200" y1="220" x2="200" y2="90"/>
 
-            <div class="item item-wrapper">
-
-                <div class="item__content">
-
-                    <div class="item__preview">
-                        <div class="item__logo">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
-                            <g fill="none" fill-rule="nonzero">
-                                <path stroke="#EF3E42" stroke-width="2" d="M21 1.414L1.414 21 21 40.586 40.586 21 21 1.414z" />
-                                <path fill="#EF3E42" d="M21 13c1.518 0 2.894.617 3.89 1.613a5.492 5.492 0 0 1 1.61 3.894c0 1.059-.65 2.656-1.503 4.284-1.594 3.043-3.902 6.205-3.996 6.209-.076 0-1.421-1.82-2.762-4.029-1.34-2.208-2.676-4.804-2.737-6.357-.002-.037-.002-.072-.002-.107 0-1.52.617-2.898 1.612-3.894A5.481 5.481 0 0 1 21 13zm1.588 4.16a2.236 2.236 0 0 0-1.586-.659 2.241 2.241 0 0 0-2.245 2.247 2.241 2.241 0 0 0 2.245 2.248c.618 0 1.18-.251 1.586-.658.408-.406.66-.968.66-1.59 0-.62-.252-1.182-.66-1.589z"
-                                />
-                            </g>
-                        </svg>
-                        </div>
-                        <div>
-                            <h2 class="item__title">
-                                San Leandro, California Testing Laboratory
-                            </h2>
-                            <div class="item__info">
-                                <p class="item__subtitle">60 miles</p>
-                                <p class="item__details"><a href="">View details</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item__plans">
-                        <p class="item__planTitle">
-                            Turn Around Time:
-                        </p>
-                        <form class="item__planList">
-                            <label class="item__plan">
-                                <div class="item__button">
-                                    <input class="item__radioButton" id="firstRadio1" name="choosePlan" type="radio" />
-                                    <span class="item__radioLabel">1 Day</span>
-                    </div>
-                    <p class="item__price">$ 1200.00</p>
-                    </label>
-                            <label class="item__plan">
-                                <div class="item__button">
-                                    <input class="item__radioButton" name="choosePlan" id="secondRadio1" type="radio" />
-                                    <span class="item__radioLabel">2 Days</span>
-                    </div>
-                    <p class="item__price">$ 900.50</p>
-                    </label>
-                            <label class="item__plan">
-                                <div class="item__button">
-                                    <input class="item__radioButton" name="choosePlan" id="thiedRadio1" type="radio" />
-                                    <span class="item__radioLabel">1 Week</span>
-                    </div>
-                    <p class="item__price">$ 150.00</p>
-                    </label>
-                            <div class="item__link"><a href="">View more</a></div>
-                        </form>
-                    </div>
-                </div>
-
-
-                <div class="item__download">
-                    <a href="">
-                        <svg class="download-arrow" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="5px" y="5px" viewBox="0 0 31.479 31.479" width="16" height="16px" style="enable-background:new 0 0 31.479 31.479;" xml:space="preserve">
-                            <path style="fill:#2c49c5;" d="M26.485,21.206c0.429-0.444,0.429-1.143,0-1.587c-0.444-0.429-1.159-0.429-1.587,0l-8.047,8.047
-	                        V1.111C16.851,0.492,16.359,0,15.74,0c-0.619,0-1.127,0.492-1.127,1.111v26.555l-8.031-8.047c-0.444-0.429-1.143-0.429-1.587,0
-	                        c-0.429,0.444-0.429,1.143,0,1.587l9.952,9.952c0.429,0.429,1.143,0.429,1.587,0L26.485,21.206z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="item item-wrapper">
-
-                <div class="item__content">
-
-                    <div class="item__preview">
-                        <div class="item__logo">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
-                            <g fill="none" fill-rule="nonzero">
-                                <path stroke="#EF3E42" stroke-width="2" d="M21 1.414L1.414 21 21 40.586 40.586 21 21 1.414z" />
-                                <path fill="#EF3E42" d="M21 13c1.518 0 2.894.617 3.89 1.613a5.492 5.492 0 0 1 1.61 3.894c0 1.059-.65 2.656-1.503 4.284-1.594 3.043-3.902 6.205-3.996 6.209-.076 0-1.421-1.82-2.762-4.029-1.34-2.208-2.676-4.804-2.737-6.357-.002-.037-.002-.072-.002-.107 0-1.52.617-2.898 1.612-3.894A5.481 5.481 0 0 1 21 13zm1.588 4.16a2.236 2.236 0 0 0-1.586-.659 2.241 2.241 0 0 0-2.245 2.247 2.241 2.241 0 0 0 2.245 2.248c.618 0 1.18-.251 1.586-.658.408-.406.66-.968.66-1.59 0-.62-.252-1.182-.66-1.589z"
-                                />
-                            </g>
-                        </svg>
-                        </div>
-                        <div>
-                            <h2 class="item__title">
-                                Boston, MA
-                            </h2>
-                            <div class="item__info">
-                                <p class="item__subtitle">60 miles</p>
-                                <p class="item__details">
-                                    <a href="">View details</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item__plans">
-                        <p class="item__planTitle">
-                            Turn Around Time:
-                        </p>
-                        <form class="item__planList">
-                            <label class="item__plan">
-                                <div class="item__button">
-                                    <input class="item__radioButton" id="firstRadio1" name="choosePlan" type="radio" />
-                                    <span class="item__radioLabel">1 Day</span>
-                    </div>
-                    <p class="item__price">$ 1200.00</p>
-                    </label>
-                            <label class="item__plan">
-                                <div class="item__button">
-                                    <input class="item__radioButton" name="choosePlan" id="secondRadio1" type="radio" />
-                                    <span class="item__radioLabel">2 Days</span>
-                    </div>
-                    <p class="item__price">$ 900.50</p>
-                    </label>
-                            <label class="item__plan">
-                                <div class="item__button">
-                                    <input class="item__radioButton" name="choosePlan" id="thiedRadio1" type="radio" />
-                                    <span class="item__radioLabel">1 Week</span>
-                    </div>
-                    <p class="item__price">$ 150.00</p>
-                    </label>
-                            <div class="item__link"><a href="">View more</a></div>
-                        </form>
-                    </div>
-                </div>
-
-
-                <div class="item__download">
-                    <a href="">
-
-                        <svg class="download-arrow" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="5px" y="5px" viewBox="0 0 31.479 31.479" width="16" height="16px" style="enable-background:new 0 0 31.479 31.479;" xml:space="preserve">
-                            <path style="fill:#2c49c5;" d="M26.485,21.206c0.429-0.444,0.429-1.143,0-1.587c-0.444-0.429-1.159-0.429-1.587,0l-8.047,8.047
-	                        V1.111C16.851,0.492,16.359,0,15.74,0c-0.619,0-1.127,0.492-1.127,1.111v26.555l-8.031-8.047c-0.444-0.429-1.143-0.429-1.587,0
-	                        c-0.429,0.444-0.429,1.143,0,1.587l9.952,9.952c0.429,0.429,1.143,0.429,1.587,0L26.485,21.206z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
+             <circle cx="200" cy="200" r="2" stroke="white" fill="black"/>
+                <defs>
+                  <animateTransform
+                        type="rotate"
+                        restart="always"
+                        calcMode="linear"
+                        xlink:href="#animation-clock-arrow-hour"
+                        repeatCount="indefinite"
+                        dur="60s"
+                        to="360 200 200"
+                        from="0 200 200"
+                        attributeName="transform"
+                    </animateTransform>
+              
+                  <animateTransform
+                        type="rotate"
+                        restart="always"
+                        calcMode="linear"
+                        xlink:href="#animation-clock-arrow-minute"
+                        repeatCount="indefinite"
+                        dur="5s"
+                        to="360 200 200"
+                        from="0 200 200"
+                        attributeName="transform"
+                  </animateTransform>
+              
+                
+                </defs>
+              </svg>
         </div>
 
-    </section>
-    <div class="container">
+        <div class=" timer-wrapper">
+
+
+            <svg id="svg1" xmlns="http://www.w3.org/2000/svg" class="timerSVG" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 120 120">  
+      <rect width="100%" height="100%" fill="black" />
+      <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="8"/>
+      <circle cx="60" cy="60" r="50" transform="rotate(0 60 60)" fill="none" transform="rotate(90 60 90)"  class="dashCircle" stroke-dashoffset="314" stroke-dasharray="314"  stroke="#ff9900" stroke-width="8" >
+          <animate attributeName="stroke-dashoffset" class="dash" fill='freeze' dur="1.5s"  values="314" /> 
+        </circle>
+        <text class="validPercent" x="50%" y="50%" fill="white" text-anchor="middle" dy="7" font-size="20">%</text>
+        
+    </svg>
+
+            <form onsubmit="return false;">
+                <span class="timer-input-span">Type a percent</span><input type="number" class="input-dash" />
+            </form>
+        </div>
+
+
+        <div class="modal-wrapper">
+            <div class="main-modal js-modal">
+                <div class="modal-text">
+                    <h4 class="modal-title">Delete this item?</h4>
+                    <p class="modal-paragraph">
+                        This operation will premenantly delete this item and all its dependencies. This action
+                        <span class="bold-text">cannot be undone.</span>
+                    </p>
+                </div>
+
+                <div class="modal-button-wrapper">
+                    <button class="modal-button-close modal-btn-general js-close">Oh no, bring me back</button>
+                    <button class="modal-button-delete modal-btn-general js-delete"> I understand, delete it</button>
+                </div>
+            </div>
+            <div class="modal-mainButton-box">
+                <button class="modal-main-button js-modal-btn">Delete</button>
+            </div>
+        </div>
 
         <div class="flickity-container">
             <div class="hand">
