@@ -127,15 +127,15 @@ const dashField = document.querySelector('.dash');
 const textPercent = document.querySelector('.validPercent');
 
 percent.addEventListener('change', () => {
-    let prevVal = dashField.attributes[".values"].nodeValue;
+    let prevVal = dashField.attributes["values"].nodeValue;
     let inputP = parseInt(percent.value, 10);
     console.log(inputP);
     dashField.beginElement();
     if (inputP >= 0 && inputP < 100) {
         if (prevVal.split(';')[1] !== undefined) {
-            dashField.attributes[".values"].nodeValue = `${prevVal.split(';')[1]}; ${314 - Math.round(inputP*3.14)}`;
+            dashField.attributes["values"].nodeValue = `${prevVal.split(';')[1]}; ${314 - Math.round(inputP*3.14)}`;
         } else if (percent.value && parseInt(percent.value, 10) < 314) {
-            dashField.attributes[".values"].nodeValue = `314; ${314 - Math.round(inputP*3.14)}`;
+            dashField.attributes["values"].nodeValue = `314; ${314 - Math.round(inputP*3.14)}`;
         }
         textPercent.innerHTML = `${inputP}%`;
     }
